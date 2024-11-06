@@ -336,7 +336,7 @@ button:hover {
         padding: 10px;
     }
     .expertise-grid {
-        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 2fr; /* Single column on mobile */
     }
 
     .project-card {
