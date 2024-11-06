@@ -3,31 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-
-
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <img src="profile.jpg" alt="photo" class="profile-pic">
         <p>Java | Web Dev | Python</p>
-        <nav>
+        <nav class="desktop-nav">
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
+            <a href="#expertise">Expertise</a>
         </nav>
+        <!-- Mobile Menu Icon -->
+    <button class="mobile-menu-icon" onclick="toggleMobileNav()">☰</button>
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="#about" onclick="toggleMobileNav()">About</a>
+        <a href="#projects" onclick="toggleMobileNav()">Projects</a>
+        <a href="#contact" onclick="toggleMobileNav()">Contact</a>
+        <a href="#expertise" onclick="toggleMobileNav()">Expertise</a>
+    </nav>
     </header>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I'm Emmanuel Mari C. Francisco a starting Web Developer and currently a student that is still learning to improve and meet the requirements that is expected of me.
-            I have a background in java and php (see the my projects) and at the moment learning Django a Web framework
-            that uses python which makes creating Web easier due to how structured and organized it is. 
-        </p>
+        <p>I'm Emmanuel Francisco, an aspiring web developer and a third-year student who is continually improving my skills 
+            to meet the expectations set for me. Throughout my years as a computer science student, I've 
+            learned many things and gone through various changes, which makes me feel excited about learning 
+            and creating more code as I build on past accomplishments. For me, the feeling of understanding
+            what I'm doing and seeing it work, especially after previous struggles, is rewarding. Even if
+            it's a small step, making progress is what coding is all about. You struggle at first,
+            learn from your mistakes, grasp new concepts, and overcome challenges along the way. It's not easy, of course,
+            but with enough determination, you can achieve it.</p>
     </section>
-
-    <section id="projects">
+     
+    <section id="expertise">
+        <h2>My Expertise</h2>
+        <div class="expertise-grid">
+            <div class="expertise-card">
+                <img src="html.png" alt="HTML Icon" class="expertise-image">
+                <h3>HTML</h3>
+            </div>
+            <div class="expertise-card">
+                <img src="css.png" alt="Css Icon" class="expertise-image">
+                <h3>Css</h3>
+            </div>
+            <div class="expertise-card">
+                <img src="php.png" alt="PHP Icon" class="expertise-image">
+                <h3>PHP</h3>
+            </div>
+            <div class="expertise-card">
+                <img src="Java.png" alt="Java Icon" class="expertise-image">
+                <h3>Java</h3>
+            </div>
+            <div class="expertise-card">
+                <img src="python.png" alt="Python Icon" class="expertise-image">
+                <h3>Python</h3>
+            </div>
+            <div class="expertise-card">
+                <img src="django.png" alt="Django Icon" class="expertise-image">
+                <h3>Django</h3>
+            </div>
+        </div>
+    </section>
+    
+       <section id="projects">
         <h2>Projects</h2>
     
         <div class="project-card">
@@ -51,8 +93,17 @@
     
     <section id="contact">
         <h2>Contact Me</h2>
+        <p>
+        <img src="https://mailarrow.com/wp-content/uploads/2023/12/pngwing.com_.png" alt="Gmail Logo" style="width: 20px; height: 20px; vertical-align: text-top;"> emmanuel.francisco2740@gmail.com
+        </p>
+        <p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" style="width: 20px; height: 20px; vertical-align: text-bottom;"> Emmanuel Francisco
+        </p>
         <form action="https://formspree.io/f/xgveaewy" method="POST">
-            <label for="email">Your Email:</label>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
     
             <label for="message">Message:</label>
@@ -76,6 +127,15 @@
         const lightbox = document.getElementById("lightbox");
         lightbox.style.display = "none";
     }
+
+    function toggleMobileNav() {
+    const mobileNav = document.getElementById("mobileNav");
+    if (mobileNav.style.display === "flex") {
+        mobileNav.style.display = "none";
+    } else {
+        mobileNav.style.display = "flex";
+    }
+}
 </script>
 </section>
 </html>
