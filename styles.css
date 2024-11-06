@@ -44,6 +44,53 @@ nav a:hover {
     text-decoration: underline;
 }
 
+#about p {
+    line-height: 1.4; /* Improved readability */
+    margin: 10px 0;
+    font-size: 1.2em; /* Larger paragraph font size if desired */
+    color: #000000;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.mobile-menu-icon {
+    display: none; /* Hidden on larger screens */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    background-color: #1f1f2c;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.mobile-nav a:hover {
+    text-decoration: underline;
+}
+
 /* Section Styles */
 section {
     padding: 20px;
@@ -53,6 +100,59 @@ section {
     max-width: 800px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+/* Expertise Section */
+/* My Expertise Section */
+#expertise {
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 800px; /* Align with other sections */
+}
+
+/* Expertise Section Header */
+#expertise h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Expertise Grid - Set to a 3x3 Layout */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 15px; /* Space between cards */
+    justify-items: center;
+}
+
+/* Expertise Card Styling */
+.expertise-card {
+    width: 120px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f4f4f4;
+}
+
+.expertise-image {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+.expertise-card h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin: 8px 0 0;
+}
+
 /* Project Section Styling */
 #projects {
     text-align: center;
@@ -134,6 +234,15 @@ textarea {
     font-size: 16px;
 }
 
+input[type="text"],
+textarea {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
 textarea {
     resize: vertical;
     min-height: 100px;
@@ -169,6 +278,20 @@ button:hover {
         padding: 15px;
         margin: 5px;
     }
+    .expertise-card {
+        width: 100px; /* Adjust card width for smaller screens */
+        padding: 15px;
+    }
+    .expertise-image {
+        width: 50px;
+        height: 50px;
+    }
+    .expertise-card h3 {
+        font-size: 1em;
+    }
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
 
     nav {
         text-align: center;
@@ -195,6 +318,12 @@ button:hover {
     .project-card h3 {
         font-size: 1.4em;
     }
+    .desktop-nav {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
 }
 
 @media (max-width: 480px) {
@@ -205,6 +334,9 @@ button:hover {
 
     section {
         padding: 10px;
+    }
+    .expertise-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
     }
 
     .project-card {
@@ -218,5 +350,21 @@ button:hover {
 
     .project-card h3 {
         font-size: 1.2em;
+    }
+    input[type="email"],
+    textarea,
+    button {
+        width: 100%; /* Full width alignment */
+    }
+    input[type="text"],
+    textarea,
+    button {
+        width: 100%; /* Full width alignment */
+    }
+    
+    /* Center the form container and reduce padding for small screens */
+    form {
+        margin: 0 auto;
+        padding: 10px;
     }
 }
