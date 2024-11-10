@@ -184,6 +184,7 @@ section {
 .project-card {
     display: inline-block;
     width: 300px;
+    height: 340px;
     margin: 20px;
     background-color: white;
     border-radius: 10px;
