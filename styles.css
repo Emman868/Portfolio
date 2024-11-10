@@ -30,9 +30,6 @@ header {
 }
 
 /* Navigation */
-nav {
-    margin-top: 10px;
-}
 
 nav a {
     color: rgb(255, 255, 255);
@@ -58,44 +55,65 @@ nav a:hover {
 }
 
 .mobile-menu-icon {
-    display: none; /* Hidden on larger screens */
+    display: none; 
     background: none;
-    border: none;
     color: white;
     font-size: 24px;
     cursor: pointer;
+    position: fixed; /* Fix it to the upper right */
+    top: 20px; /* Adjust this value as needed */
+    right: 20px; /* Adjust this value as needed */
+    z-index: 1101; /* Ensure it’s above other elements */
+
 }
 
+/* Mobile Nav default styles */
+/* Style for the ☰ button */
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Mobile Navigation Dropdown */
 .mobile-nav {
     display: none; /* Hidden by default */
     flex-direction: column;
     gap: 10px;
     position: fixed;
-    top: 0;
+    top: 0; /* Start at the top */
     right: 0;
-    height: 100vh;
-    width: 70%;
-    background-color: #1f1f2c;
-    padding: 20px;
-    text-align: center;
+    width: 95%; /* Full width */
+    background-color: rgba(50, 50, 70, 0.9); /* Semi-transparent background */
+    padding: 20px; /* Add padding for spacing */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+    text-align: left;
 }
 
 .mobile-nav a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.2em; /* Slightly larger font */
+    padding: 10px 0; /* Vertical spacing between items */
+    display: block;
 }
 
 .mobile-nav a:hover {
-    text-decoration: underline;
+    background-color: rgba(50, 50, 70, 0.9); /* Hover effect */
+    border-radius: 3px;
 }
+
+
 
 /* Section Styles */
 section {
     padding: 20px;
     margin: 10px auto;
-    background: linear-gradient(135deg, #babec2 0%, #89336c 100%);
+    background: linear-gradient(135deg, #babec2 0%, #9c5183 100%);
     border-radius: 8px;
     max-width: 800px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -104,14 +122,14 @@ section {
 /* My Expertise Section */
 #expertise {
     padding: 20px;
-    margin: 15px auto;
+    margin: 5px auto;
     max-width: 800px; /* Align with other sections */
 }
 
 /* Expertise Section Header */
 #expertise h2 {
     font-size: 1.8em;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -217,6 +235,7 @@ section {
     max-height: 90%;
     border-radius: 10px;
 }
+
 /* Contact Form */
 form {
     max-width: 800px; /* Optional: Limit the form width on larger screens */
