@@ -58,7 +58,7 @@ nav a:hover {
     display: none; 
     background: none;
     border: none;
-    color: white;
+    color: rgb(98, 119, 158);
     font-size: 24px;
     cursor: pointer;
     position: fixed; /* Fix it to the upper right */
