@@ -354,17 +354,17 @@ button:hover {
     input[type="email"],
     textarea,
     button {
-        width: 97%; /* Full width alignment */
+        width: 94%; /* Full width alignment */
     }
     input[type="text"],
     textarea,
     button {
-        width: 97%; /* Full width alignment */
+        width: 94%; /* Full width alignment */
     }
     input[type="message"],
     textarea,
     button {
-        width: 97%; /* Full width alignment */
+        width: 94%; /* Full width alignment */
     }
     
     /* Center the form container and reduce padding for small screens */
