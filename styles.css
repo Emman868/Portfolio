@@ -180,6 +180,10 @@ section {
     background-color: #f4f4f4;
 }
 
+#projects h2 {
+    font-size: 1.8em;
+}
+
 /* Project Card Layout */
 .project-card {
     display: inline-block;
