@@ -235,6 +235,14 @@ section {
     color: #444;
 }
 
+.facebook-link {
+    display: inline-flex;
+    align-items: center;
+  }
+  .facebook-link img {
+    margin-right: 5px; /* Adjust the space here */
+  }
+
 /* Lightbox Overlay */
 .lightbox {
     display: none;
