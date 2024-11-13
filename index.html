@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <meta name="description" content="A portfolio showcasing various projects related to java, python, and development.">
-    <meta name="keywords" content="Portfolio, Web development, Projects, Java, Python, HTML, Development">
+    <meta name="keywords" content="Portfolio, Web development, Projects, Java, Python, Development">
     <meta name="author" content="Emmanuel Francisco">
     
     <!-- Open Graph Meta Tags for Social Media (e.g., Facebook, LinkedIn) -->
@@ -24,11 +24,13 @@
 </head>
 <body>
     <header>
-        <img src="profile.jpg" alt="photo" class="profile-pic">
+        <div class="header-content">
+        <img src="profile.jpg" alt="portrait of Emmanuel Francisco" class="profile-pic">
         <p>Java | Web Dev | Python</p>
+        </div>
         <nav class="desktop-nav">
             <a href="#about">About me</a>
-            <a href="#expertise">Expertise</a>
+            <a href="#expertise">My Expertise</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contacts</a>
         </nav>
@@ -37,7 +39,7 @@
     <!-- Mobile Navigation -->
     <nav class="mobile-nav" id="mobileNav">
         <a href="#about" onclick="toggleMobileNav()">About me</a>
-        <a href="#expertise" onclick="toggleMobileNav()">Expertise</a>
+        <a href="#expertise" onclick="toggleMobileNav()">My Expertise</a>
         <a href="#projects" onclick="toggleMobileNav()">Projects</a>
         <a href="#contact" onclick="toggleMobileNav()">Contacts</a>
     </nav>
@@ -87,8 +89,7 @@
     
        <section id="projects">
         <h2>Projects</h2>
-    
-        <div class="project-card">
+            <div class="project-card">
             <img src="Java_project.jpg" alt="Java Simple Game" class="project-image" onclick="openLightbox(this)">
             <h3>Project 1: Java Game</h3>
             <p>A simple Maze game built using Java.</p>
@@ -97,19 +98,19 @@
         <div class="project-card">
             <img src="Checklist.jpg" alt="Checklist App" class="project-image" onclick="openLightbox(this)">
             <h3>Project 2: Checklist</h3>
-            <p>A checklist to track schedules, professors, subjects and grades.</p>
+            <p>A simple checklist to track schedules, professors, subjects and grades.</p>
         </div>
 
         <div class="project-card">
-            <img src="Python_output.png" alt="Python project" class="project-image" onclick="openLightbox(this)">
-            <h3>Project 3: Cafe POS </h3>
-            <p>A POS with no UI designed to help a small local business.</p>
+            <img src="SaveIt.png" alt="SaveIt" class="project-image" onclick="openLightbox(this)">
+            <h3>Project 3: SaveIt </h3>
+            <p>Able to save various collections including musics, pictures and movies.</p>
         </div>
 
         <div class="project-card">
-            <img src="Django_output.png" alt="Django simple text" class="project-image" onclick="openLightbox(this)">
-            <h3>Project 4: Django Text</h3>
-            <p>A simple Django that renders a text</p>
+            <img src="PreviewImage.jpg" alt="Preview Album" class="project-image" onclick="openLightbox(this)">
+            <h3>Project 4: Album Preview</h3>
+            <p>A Preview of album from the SaveIt</p>
         </div>
     
         <!-- Lightbox Overlay -->
@@ -146,6 +147,7 @@
     function openLightbox(image) {
         const lightbox = document.getElementById("lightbox");
         const lightboxImage = document.getElementById("lightbox-image");
+        document.body.style.overflow = 'hidden';
 
         lightboxImage.src = image.src;
         lightbox.style.display = "flex";
@@ -154,6 +156,7 @@
     function closeLightbox() {
         const lightbox = document.getElementById("lightbox");
         lightbox.style.display = "none";
+        document.body.style.overflow = 'auto';
     }
 
     function toggleMobileNav() {
