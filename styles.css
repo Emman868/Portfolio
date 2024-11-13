@@ -1,20 +1,33 @@
 /* General Styles */
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #2b333d 0%, #562a2a 100%);
+    background: linear-gradient(135deg, #192126 0%, #2593c6 100%);
 }
 
 /* Header */
 header {
-    background-color: #1f1f2c;
+    background-color: #1f2425;
     color: white;
     text-align: center;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-info p {
+    margin-top: 10px;
+    color: #fff;
 }
 
 /* Profile Picture */
@@ -56,15 +69,17 @@ nav a:hover {
 
 .mobile-menu-icon {
     display: none; 
-    background: none;
+    background: none; /* Match the header color */
     border: none;
     color: rgb(98, 119, 158);
     font-size: 24px;
     cursor: pointer;
-    position: fixed; /* Fix it to the upper right */
-    top: 20px; /* Adjust this value as needed */
-    right: 20px; /* Adjust this value as needed */
+    position: fixed;
+    top: 0; /* Align with the top of the header */
+    right: 0; /* Align with the right of the header */
+    padding: 15px 20px; /* Add padding for better visibility */
     z-index: 1101; /* Ensure it’s above other elements */
+    border-bottom-left-radius: 8px; /* Round the bottom left corner */
 }
 .mobile-menu-icon:hover {
     background: none;
@@ -109,13 +124,11 @@ nav a:hover {
     border-radius: 3px;
 }
 
-
-
 /* Section Styles */
 section {
     padding: 20px;
     margin: 10px auto;
-    background: linear-gradient(135deg, #babec2 0%, #c263a2 100%);
+    background: linear-gradient(135deg, #ebd3d3 0%, #94bce3 100%);
     border-radius: 8px;
     max-width: 800px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -179,7 +192,6 @@ section {
     padding: 40px 20px;
     background-color: #f4f4f4;
 }
-
 #projects h2 {
     font-size: 1.8em;
 }
@@ -220,7 +232,7 @@ section {
 
 .project-card p {
     padding: 0 15px 15px;
-    color: #666;
+    color: #444;
 }
 
 /* Lightbox Overlay */
